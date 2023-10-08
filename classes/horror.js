@@ -10,6 +10,10 @@ class Horror extends Movie {
         return this.scareLevel >= 8;
     }
 
+    addScare(){
+        this.scareLevel++
+    }
+
 }
 
 module.exports = {Horror};
