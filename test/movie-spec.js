@@ -1,9 +1,9 @@
 const { expect } = require("chai");
 
 const Movie = require("../classes/movie.js");
-const Horror = require("../classes/horror.js");
+const {Horror} = require("../classes/horror.js");
 const Comedy = require("../classes/comedy.js");
-const Action = require("../classes/action.js");
+const {Action} = require("../classes/action.js");
 
 
 
@@ -49,14 +49,14 @@ describe("Horror class", function() {
 
 describe("Comedy class", function() {
     it("inherits from the Movie class and includes a laughsPerMinute attribute", function() {
-        let dumbAndDumber = new Comedy("Zoolander", 107, 7.3, 4);
+        let zoolander = new Comedy("Zoolander", 107, 7.3, 4);
         let regularMovie = new Movie("Gladiator", 155, 8.5);
 
-        expect(dumbAndDumber.laughsPerMinute).to.equal(4);
+        expect(zoolander.laughsPerMinute).to.equal(4);
         expect(regularMovie.laughsPerMinute).to.be.undefined;
 
-        expect(dumbAndDumber instanceof Comedy).to.be.true;
-        expect(dumbAndDumber instanceof Movie).to.be.true;
+        expect(zoolander instanceof Comedy).to.be.true;
+        expect(zoolander instanceof Movie).to.be.true;
     });
 });
 

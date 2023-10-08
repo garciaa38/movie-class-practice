@@ -12,4 +12,4 @@ class Horror extends Movie {
 
 }
 
-module.exports = Horror;
+module.exports = {Horror};

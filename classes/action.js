@@ -12,4 +12,4 @@ class Action extends Movie {
 
 }
 
-module.exports = Action;
+module.exports = {Action};

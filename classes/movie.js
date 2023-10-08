@@ -3,6 +3,7 @@ class Movie {
         this.title = title;
         this.duration = duration;
         this.rating = rating;
+        this.cast = []
     }
 
     isLong() {
@@ -12,6 +13,11 @@ class Movie {
     updateRating(newRating) {
         this.rating = newRating;
     }
+
+    static actorInMovie(movie, actorName) {
+        return movie.cast.some(actor => actor.name === actorName);
+    }
+
 }
 
 module.exports = Movie;
