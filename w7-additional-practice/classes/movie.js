@@ -20,11 +20,11 @@ class Movie{
         this.rating = rating;
     }
 
-    actorInMovie(movie, actor) {
+    static actorInMovie(movie, actor) {
         for (let i = 0; i < movie.cast.length; i++) {
             console.log(movie.cast[i]);
             let castMember = movie.cast[i];
-            if (castMember === actor) {
+            if (castMember.name === actor) {
                 return true;
             }
         }
@@ -33,9 +33,11 @@ class Movie{
 
 }
 
-let movie = new Movie("The Godfather", 175, 9.2);
-let al = new Actor("Al Pacino");
-movie.cast.push(al);
-Movie.actorInMovie(movie, "Al Pacino");
+
+
+// let movie = new Movie("The Godfather", 175, 9.2);
+// let al = new Actor("Al Pacino");
+// movie.cast.push(al);
+// Movie.actorInMovie(movie, "Al Pacino");
 
 module.exports = Movie;
